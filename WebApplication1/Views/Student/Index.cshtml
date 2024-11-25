@@ -1,0 +1,33 @@
+﻿@model WebApplication1.Models.StudentModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <h2>Đăng ký chuyên ngành</h2>
+
+    <form asp-action="Register" method="post">
+        <div>
+            <label>MSSV:</label>
+            <input asp-for="MSSV" required />
+        </div>
+        <div>
+            <label>Họ tên:</label>
+            <input asp-for="HoTen" required />
+        </div>
+        <div>
+            <label>Điểm TB:</label>
+            <input asp-for="DiemTB" type="number" step="0.01" required />
+        </div>
+        <div>
+            <label>Chuyên ngành:</label>
+            <select asp-for="ChuyenNganh">
+                <option value="CNPM">Công nghệ phần mềm</option>
+                <option value="HTTT">Hệ thống thông tin</option>
+                <option value="ANM">An ninh mạng</option>
+                <option value="TTNT">Truyền thông mạng</option>
+                <option value="MMT">Mạng máy tính</option>
+            </select>
+        </div>
+        <button type="submit">Đăng ký</button>
+    </form>
+}
